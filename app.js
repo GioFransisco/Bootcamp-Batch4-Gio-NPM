@@ -9,6 +9,8 @@ const rl = readline.createInterface({
 rl.question('what is your name : ', (name) => {
     rl.question('\nwhat is your email : ', (email) => {
         rl.question('\nwhat is your phone : ', (phone) => {
+
+            //membuat logic untuk menentukan nama, email, dan nomor telepon dengan menggunakan validator
             if (validator.isEmpty(name)){
                 console.log('this is empty value')
             }else{
