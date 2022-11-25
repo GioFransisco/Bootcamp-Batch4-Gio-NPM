@@ -9,7 +9,11 @@ const rl = readline.createInterface({
 rl.question('what is your name : ', (name) => {
     rl.question('\nwhat is your email : ', (email) => {
         rl.question('\nwhat is your phone : ', (phone) => {
-            console.log(`your name is : ${name}`)
+            if (validator.isEmpty(name)){
+                console.log('this is empty value')
+            }else{
+                console.log(`your name is : ${name}`)
+            }
             if(validator.isEmail(email) != true){
                 console.log('your email is wrong')
             }else{
